@@ -2,8 +2,7 @@
 - hosts: all
   become: yes
   become_method: su
-  vars:
-  - path: "/Documents/"
+
   tasks:
   - name: Ansible delete file glob
     find:
