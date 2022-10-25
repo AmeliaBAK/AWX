@@ -12,7 +12,7 @@
         path: /etc/A.log
         state: absent
       become: yes
-      become_method: su        
+      become_method: sudo       
 
     - name: "Read a file content"
       shell: |
