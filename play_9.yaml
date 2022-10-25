@@ -1,13 +1,13 @@
 ---
 - hosts: all
+  become: yes
+  become_method: su
   tasks:
   - name: Ansible delete file glob
     find:
       paths: /etc/
       patterns: "*.log"
     register: files_to_delete
-    become: yes
-    become_method: su
   
   - name: Print log file names
     debug:
@@ -18,3 +18,4 @@
       path: "{{ item.path }}"
       state: absent
     with_items: "{{ files_to_delete.files }}"
+    
