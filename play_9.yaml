@@ -3,7 +3,7 @@
   tasks:
   - name: Ansible delete file glob
     find:
-      paths: /root
+      paths: /etc/
       patterns: "*.log"
     register: files_to_delete
     become: yes
