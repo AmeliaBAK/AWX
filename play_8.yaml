@@ -9,7 +9,7 @@
   
   - name: Print log file names
     debug:
-      msg: "{{ files_to_delete }}"
+      msg: "{{ files_to_delete.files }}"
       
   - name: Ansible remove file glob
     file:
