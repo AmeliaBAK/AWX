@@ -11,7 +11,8 @@
       file:
         path: /etc/A.log
         state: absent
-        
+      become: yes
+      become_method: su        
 
     - name: "Read a file content"
       shell: |
