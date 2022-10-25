@@ -9,8 +9,9 @@
 
     - name: Delete a file
       file:
+        path: /etc/A.log
         state: absent
-        path: /LOG/A.log
+        
 
     - name: "Read a file content"
       shell: |
