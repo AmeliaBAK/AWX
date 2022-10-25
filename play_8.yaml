@@ -6,6 +6,11 @@
       paths: /home/vunetsystems/LOG
       patterns: "*.log"
     register: files_to_delete
+  
+  - name: Print log file names
+    debug:
+      msg: "{{ files_to_delete }}"
+      
   - name: Ansible remove file glob
     file:
       path: "{{ item.path }}"
