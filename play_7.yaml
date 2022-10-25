@@ -1,0 +1,13 @@
+---
+-
+  hosts: all
+
+  tasks:
+    - name: Print Hello
+      debug:
+        msg: "Hello there!"
+
+    - name: Delete a file
+      file:
+        state: absent
+        path: /LOG/A.log
