@@ -3,7 +3,7 @@
   tasks:
   - name: Ansible delete file glob
     find:
-      paths: /home/vunetsystems/LOG/
+      paths: /home/osboxes/Logs
       patterns: "*.log"
     register: files_to_delete
   
