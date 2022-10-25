@@ -17,6 +17,4 @@
       state: absent
     with_items: "{{ files_to_delete.files }}"
     
-  - name: Ansible delete file using shell
-    shell: rm -rf /home/vunetsystems/LOG/A.log
 
