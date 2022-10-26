@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  become_method: su
+
+  tasks: 
+  - name: make interface up
+    ios_interface:
+      name: GigabitEthernet2
+      enabled: True
+     
